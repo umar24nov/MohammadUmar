@@ -1,33 +1,38 @@
-# 📌 Mohammad Umar - GitHub Profile
-**🌟 Dare to Dream | Build to Inspire**  
-  
-Welcome to my GitHub profile! 👋 I'm Mohammad Umar, a passionate software developer and lifelong learner focused on building scalable web applications, exploring emerging technologies, and contributing to open-source projects.
+# Mohammad Umar - GitHub Profile
 
+  Innovate | Create | Inspire
 
-*“Code is just like humor, it's bad if you have to explain it”*
+Welcome to my GitHub profile! 👋 I'm **Mohammad Umar**, a passionate developer and perpetual learner with a zest for building impactful software, exploring new technologies, and eager to contribute the open-source community.
 
----
+"The only way to do great work is to love what you do." - Steve Jobs
 
-## 🚀 About Me  
-- 🎓 **Educational Qualifications:** Pursuing **B.Tech in CSE** from **COER University**.
-- 🔭 **Software Development:** Actively working on software projects.  
-- 💻 **Competitive Programmer:** I enjoy solving algorithmic problems using **C++**.  
-- 💬 Ask me about web development, APIs, full-stack project architecture, or competitive programming tips.  
+🌟 About Me
+Academic Background:  Pursuing **B.Tech in CSE** from **COER University**.
 
----
+Tech Enthusiast: Always curious about the latest trends in technology and software development.
 
-## 🔥 What I’m Learning  
-- 🚀 **Advanced MERN Stack Development**  
-- ⚙️ **REST APIs & Microservices**  
-- ☁️ **Cloud Deployment & DevOps Tools**  
-- 🤖 **Machine Learning With Python** 
+Coding Ninja: C Programming, Object-Oriented Programming (OOP) using Java, Python Programming, Data Structures and Algorithms (DSA) in C++, and HTML & CSS.
 
----
+Open to Collaborations: Let's work together on exciting projects, discuss tech trends, or brainstorm ideas.
 
-## 💬 Let’s Connect  
-- **LinkedIn** : [https://www.linkedin.com/in/akshat-rauthan-abba91214/](https://www.linkedin.com/in/akshat-rauthan-abba91214/)
-- **Leetcode** : [https://leetcode.com/Akshat_Rauthan/](https://leetcode.com/Akshat_Rauthan/)
-- **GitHub** : [https://github.com/AkshatRauthan/](https://github.com/AkshatRauthan/)
-- **Email Me** : [rauthanakshat2479@gmail.com](mailto:rauthanakshat2479@gmail.com)
+📚 What I'm Exploring
+Full-Stack Development: Enhancing skills in building dynamic web applications.
 
----
+Artificial Intelligence & Machine Learning: Exploring AI/ML projects and their applications.
+
+🛠️ Technologies & Tools
+Programming Languages: C, C++, Python, Java
+
+Web Development: HTML, CSS, Learning JS
+
+Tools & Platforms: Git, GitHub
+
+🌐 Connect with Me
+LinkedIn: [[Your LinkedIn URL]](https://www.linkedin.com/in/mohammad-umar-5b2ba52a2)
+
+Email: umar24nov@gmail.com
+
+Portfolio: [Link to Your Portfolio/Website]
+
+✨ Fun Fact
+Fun Fact: When I'm not coding, you can find me playing or watching Cricket
