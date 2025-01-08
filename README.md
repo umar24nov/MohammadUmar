@@ -32,5 +32,5 @@ LinkedIn: https://www.linkedin.com/in/mohammad-umar-5b2ba52a2
 
 Email: umar24nov@gmail.com
 
-✨ Fun Fact
+✨ Fun Fact:
 When I'm not coding, you can find me playing or watching Cricket.
