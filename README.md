@@ -1,4 +1,4 @@
-# Mohammad Umar - GitHub Profile
+![linkedin-box-fill](https://github.com/user-attachments/assets/ed9fe6d6-9a10-4a02-87c2-81cf2ef42136)# Mohammad Umar - GitHub Profile
 
   Innovate | Create | Inspire
 
@@ -27,8 +27,8 @@ Web Development: HTML, CSS, Learning JS
 
 Tools & Platforms: Git, GitHub
 
-🌐 Connect with Me
-LinkedIn: [[Your LinkedIn URL]](https://www.linkedin.com/in/mohammad-umar-5b2ba52a2)
+![image](https://github.com/user-attachments/assets/e90427e2-b19c-4275-8da7-36cb3ade7225)
+ LinkedIn: [[Your LinkedIn URL]](https://www.linkedin.com/in/mohammad-umar-5b2ba52a2)
 
 Email: umar24nov@gmail.com
 
