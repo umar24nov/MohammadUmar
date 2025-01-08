@@ -2,11 +2,12 @@
 
   Innovate | Create | Inspire
 
-Welcome to my GitHub profile! 👋 I'm **Mohammad Umar**, a passionate developer and perpetual learner with a zest for building impactful software, exploring new technologies, and eager to contribute the open-source community.
+Welcome to my GitHub profile!
+
+I'm **Mohammad Umar**, a passionate developer and perpetual learner with a zest for building impactful software, exploring new technologies, and eager to contribute the open-source community.
 
 "The only way to do great work is to love what you do." - Steve Jobs
 
-🌟 About Me
 Academic Background:  Pursuing **B.Tech in CSE** from **COER University**.
 
 Tech Enthusiast: Always curious about the latest trends in technology and software development.
