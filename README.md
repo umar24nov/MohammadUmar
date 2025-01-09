@@ -8,29 +8,30 @@ I'm **Mohammad Umar**, a passionate developer and perpetual learner with a zest 
 
 "The only way to do great work is to love what you do." - Steve Jobs
 
-Academic Background:  Pursuing **B.Tech in CSE** from **COER University**.
+**Academic Background** :  Pursuing **B.Tech in CSE** from **COER University**.
 
-Tech Enthusiast: Always curious about the latest trends in technology and software development.
+**Tech Enthusiast** : Always curious about the latest trends in technology and software development.
 
-Coding Ninja: C Programming, Object-Oriented Programming (OOP) using Java, Python Programming, Data Structures and Algorithms (DSA) in C++, and HTML & CSS.
+**Coding Ninja** : C Programming, Object-Oriented Programming (OOP) using Java, Python Programming, Data Structures and Algorithms (DSA) in C++, and HTML & CSS.
 
-Open to Collaborations: Let's work together on exciting projects, discuss tech trends, or brainstorm ideas.
+**Open to Collaborations** : Let's work together on exciting projects, discuss tech trends, or brainstorm ideas.
 
-📚 What I'm Exploring
-Full-Stack Development: Enhancing skills in building dynamic web applications.
+📚 **What I'm Exploring**
 
-Artificial Intelligence & Machine Learning: Exploring AI/ML projects and their applications.
+**Full-Stack Development **: Enhancing skills in building dynamic web applications.
 
-🛠️ Technologies & Tools
-Programming Languages: C, C++, Python, Java
+**Artificial Intelligence & Machine Learning** : Exploring AI/ML projects and their applications.
 
-Web Development: HTML, CSS, Learning JS
+🛠️ **Technologies & Tools**
 
-Tools & Platforms: Git, GitHub
+**Programming Languages** : C, C++, Python, Java
 
-LinkedIn: https://www.linkedin.com/in/mohammad-umar-5b2ba52a2
+**Web Development** : HTML, CSS, Learning JS
+**
+Tools & Platforms**  : Git, GitHub
 
-Email: umar24nov@gmail.com
+**LinkedIn** : https://www.linkedin.com/in/mohammad-umar-5b2ba52a2
 
-✨ Fun Fact:
-When I'm not coding, you can find me playing or watching Cricket.
+**Email** : umar24nov@gmail.com
+
+✨** Fun Fact** : When I'm not coding, you can find me playing or watching Cricket.
