@@ -18,7 +18,7 @@ I'm **Mohammad Umar**, a passionate developer and perpetual learner with a zest 
 
 📚 **What I'm Exploring**
 
-**Full-Stack Development **: Enhancing skills in building dynamic web applications.
+**Full-Stack Development** : Enhancing skills in building dynamic web applications.
 
 **Artificial Intelligence & Machine Learning** : Exploring AI/ML projects and their applications.
 
