@@ -27,8 +27,8 @@ I'm **Mohammad Umar**, a passionate developer and perpetual learner with a zest 
 **Programming Languages** : C, C++, Python, Java
 
 **Web Development** : HTML, CSS, Learning JS
-**
-Tools & Platforms**  : Git, GitHub
+
+**Tools & Platforms**  : Git, GitHub
 
 **LinkedIn** : https://www.linkedin.com/in/mohammad-umar-5b2ba52a2
 
