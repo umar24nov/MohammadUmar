@@ -267,7 +267,7 @@ function Navbar({ onFeedback }) {
    4. HERO
 ───────────────────────────────────────────────────────── */
 function Hero() {
-  const typed = useTypewriter(["Full Stack Developer","CS Fresher","Problem Solver","Open Source Enthusiast","ML Explorer"]);
+  const typed = useTypewriter(["Developer","CS Fresher","Problem Solver","Open Source Enthusiast","ML Explorer"]);
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-[5vw] relative z-10">
       <div className="absolute w-[480px] h-[480px] rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(0,212,255,0.12)_0%,transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
@@ -299,7 +299,7 @@ function Hero() {
             Put your resume PDF in /public as "resume.pdf"
             OR replace href with your Google Drive shareable link.
           */}
-          <a href="/resume.pdf" download="Mohd_Umar_Resume.pdf"
+          <a href="/resume.pdf" download="my-portfolio\Resume.pdf"
             className="font-spacemono text-[11px] md:text-xs font-bold tracking-widest px-5 md:px-8 py-2.5 md:py-3 rounded bg-transparent text-[#34d399] border border-[#34d399] no-underline hover:bg-[rgba(52,211,153,0.1)] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)] transition-all duration-200 inline-flex items-center gap-2">
             ⬇ Download CV
           </a>
@@ -387,27 +387,27 @@ function About() {
 ───────────────────────────────────────────────────────── */
 const projects = [
   {
-    name:"StudyVault", emoji:"📚", tagline:"AI-Powered Study Companion",
-    description:"Full-stack platform that centralises notes, generates AI summaries, flashcards and quizzes from uploaded PDFs — helping students study smarter, not harder.",
-    tech:["React","Node.js","MongoDB","OpenAI API","Express","Cloudinary"],
+    name:"StudyVault", emoji:"📚", tagline:"Full Stack Study Companion",
+    description:"A comprehensive full-stack academic platform designed to empower students with instant access to high-quality educational resources—completely free.",
+    tech:["React","Node.js","Firebase","Cloudinary"],
     accent:"text-[#00d4ff]", border:"hover:border-[#00d4ff]", topBar:"from-[#00d4ff]",
     tag:"bg-[rgba(0,212,255,0.08)] text-[#00d4ff] border-[rgba(0,212,255,0.2)]",
     featured:true, status:"Deployed on Vercel",
-    github:"https://github.com/umar24nov", demo:"#",
+    github:"https://github.com/umar24nov", demo:"https://studyvaultapp.vercel.app/",
   },
   {
-    name:"Performance Predictor", emoji:"📊", tagline:"ML-Based Academic Forecasting",
-    description:"ML app that analyses student attendance, grades and behaviour patterns to predict performance and flag at-risk students early — backed by a clean Flask REST API.",
-    tech:["Python","Scikit-learn","Pandas","NumPy","Flask","MySQL"],
+    name:"AcademicAI", emoji:"📊", tagline:"ML-Based Academic Forecasting",
+    description:"ML app that analyses student attendance, grades and behaviour patterns to predict performance and flag at-risk students early — backed by a clean Fast API.",
+    tech:["Python","Scikit-learn","Pandas","NumPy","Fast API","MySQL"],
     accent:"text-[#a78bfa]", border:"hover:border-[#a78bfa]", topBar:"from-[#a78bfa]",
     tag:"bg-[rgba(167,139,250,0.08)] text-[#a78bfa] border-[rgba(167,139,250,0.2)]",
     featured:true, status:"Deployed on Render",
-    github:"https://github.com/umar24nov", demo:"#",
+    github:"https://github.com/umar24nov", demo:"https://academic-ai.onrender.com",
   },
   {
     name:"Portfolio Website", emoji:"🌐", tagline:"Personal Brand & Showcase",
-    description:"This very site — animated React portfolio with canvas geometry, scroll reveals, a code signature and GitHub stats. Built purely with Tailwind CSS.",
-    tech:["React","Tailwind CSS","Canvas API","CSS Animations","Vercel"],
+    description:"This very site — animated React portfolio with canvas geometry, scroll reveals, a code signature and GitHub stats. Built purely with React & Tailwind CSS.",
+    tech:["React","Tailwind CSS",,"CSS Animations","Render"],
     accent:"text-[#34d399]", border:"hover:border-[#34d399]", topBar:"from-[#34d399]",
     tag:"bg-[rgba(52,211,153,0.08)] text-[#34d399] border-[rgba(52,211,153,0.2)]",
     featured:false, status:"Live Now",
@@ -510,7 +510,7 @@ function Skills() {
           <p className="font-spacemono text-[#00d4ff] text-[11px] tracking-[3px] mb-6">LANGUAGES</p>
           <SkillBar name="Python"      level={82} />
           <SkillBar name="C"           level={70} />
-          <SkillBar name="C++"         level={68} />
+          <SkillBar name="C++"         level={90} />
           <SkillBar name="JavaScript"  level={80} />
           <SkillBar name="SQL"         level={75} />
         </div>
@@ -544,8 +544,8 @@ function Skills() {
           <p className="font-spacemono text-[#fb923c] text-[11px] tracking-[3px] mb-6">BACKEND</p>
           <SkillBar name="Node.js"  level={75} />
           <SkillBar name="Express"  level={72} />
-          <SkillBar name="REST API" level={74} />
-          <SkillBar name="Flask"    level={65} />
+          <SkillBar name="FAST API" level={70} />
+          {/* <SkillBar name="Flask"    level={65} /> */}
         </div>
 
         {/* ML + Database — chips only (honest, no fake bars) */}
@@ -574,23 +574,23 @@ function CodeSignature() {
   /* Each line is a JSX element with coloured spans */
   const lines = [
     <><span className="cc"># Who is Mohd Umar? Let the code explain.</span></>,
-    " ",
+    ``,
     <><span className="ck">class </span><span className="cf">Developer</span><span className="co">:</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">def </span><span className="cf">__init__</span><span className="co">(</span><span className="cv">self</span><span className="co">):</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">name</span>        <span className="co">=</span> <span className="cs">"Mohd Umar"</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">role</span>        <span className="co">=</span> <span className="cs">"CS Fresher → Full Stack + ML"</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">skills</span>      <span className="co">=</span> <span className="co">["</span><span className="cs">React</span><span className="co">","</span><span className="cs">Node.js</span><span className="co">","</span><span className="cs">Python</span><span className="co">","</span><span className="cs">ML</span><span className="co">"]</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">philosophy</span>  <span className="co">=</span> <span className="cs">"Ship it. Improve it. Repeat."</span></>,
-    <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">coffee</span>      <span className="co">=</span> <span className="cn">float</span><span className="co">("inf")</span>  <span className="cc"># essential ☕</span></>,
-    " ",
+    <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">chai</span>      <span className="co">=</span> <span className="cn">float</span><span className="co">("inf")</span>  <span className="cc"># essential ☕</span></>,
+    ``,
     <>&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">def </span><span className="cf">solve</span><span className="co">(</span><span className="cv">self</span><span className="co">, </span><span className="cv">problem</span><span className="co">):</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cc"># Never give up — iterate until elegant</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">while not </span><span className="cv">problem</span><span className="co">.</span><span className="cf">solved</span><span className="co">():</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">approach</span> <span className="co">=</span> <span className="cv">self</span><span className="co">.</span><span className="cf">think_differently</span><span className="co">()</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">problem</span><span className="co">.</span><span className="cf">attack</span><span className="co">(</span><span className="cv">approach</span><span className="co">)</span></>,
-    <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">if </span><span className="cv">self</span><span className="co">.</span><span className="cv">coffee</span> <span className="co">==</span> <span className="cn">0</span><span className="co">: </span><span className="cf">self</span><span className="co">.</span><span className="cf">refill</span><span className="co">()</span></>,
+    <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">if </span><span className="cv">self</span><span className="co">.</span><span className="cv">chai</span> <span className="co">==</span> <span className="cn">0</span><span className="co">: </span><span className="cf">self</span><span className="co">.</span><span className="cf">refill</span><span className="co">()</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">return </span><span className="cs">"elegant solution ✓"</span></>,
-    " ",
+    ``,
     <><span className="cc"># Entry point</span></>,
     <><span className="cv">umar</span> <span className="co">=</span> <span className="cf">Developer</span><span className="co">()</span></>,
     <><span className="cf">print</span><span className="co">(</span><span className="cv">umar</span><span className="co">.</span><span className="cf">solve</span><span className="co">(</span><span className="cs">"your next big idea"</span><span className="co">))</span></>,
@@ -637,8 +637,8 @@ function CodeSignature() {
    9. EDUCATION
 ───────────────────────────────────────────────────────── */
 const timeline = [
-  { period:"2021 – 2025", degree:"B.Tech in Computer Science & Engineering", institution:"Your University Name", detail:"DSA, Web Dev, Machine Learning, DBMS and Operating Systems.", icon:"🎓" },
-  { period:"2019 – 2021", degree:"Higher Secondary (Class XII)", institution:"Your School Name", detail:"Physics, Chemistry, Mathematics — building the analytical foundation.", icon:"📘" },
+  { period:"2023 – 2027", degree:"B.Tech in Computer Science & Engineering", institution:"COER University", detail:"DSA, Web Dev, Machine Learning, DBMS and Operating Systems.", icon:"🎓" },
+  { period:"2021", degree:"Higher Secondary (Class XII)", institution:"Doon Public School", detail:"Physics, Chemistry, Mathematics", icon:"📘" },
 ];
 function Education() {
   return (
