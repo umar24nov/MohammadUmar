@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# 🌐 Mohd Umar — Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A dark-themed, animated personal portfolio built with **React** and **Tailwind CSS**.
 
-## Available Scripts
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38BDF8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-00d4ff?style=flat-square)](LICENSE)
+[![Portfolio](https://img.shields.io/badge/Live-Portfolio-00d4ff?style=flat-square)](https://github.com/umar24nov)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 👤 About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the personal portfolio of **Mohd Umar**, a B.Tech Computer Science fresher passionate about Full Stack Development and Machine Learning. This site serves as a showcase of projects, skills, and open-source activity.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 📧 [umar24nov@gmail.com](mailto:umar24nov@gmail.com)
+- 💼 [linkedin.com/in/mohammadumarfarook](https://www.linkedin.com/in/mohammadumarfarook)
+- 🐙 [github.com/umar24nov](https://github.com/umar24nov)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 What This Repo Contains
 
-### `npm run build`
+```
+my-portfolio/
+├── public/
+│   └── resume.pdf              # Resume / CV (replace with your own)
+├── src/
+│   ├── App.jsx                 # Entire portfolio — all sections in one file
+│   ├── index.js                # React entry point
+│   └── index.css               # Tailwind base imports + global reset
+├── tailwind.config.js          # Tailwind content paths config
+├── package.json                # Dependencies
+└── README.md                   # You are here
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🗂️ Sections
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| # | Section | Description |
+|---|---------|-------------|
+| 01 | **Hero** | Animated typewriter intro, name, CTA buttons, Download CV |
+| 02 | **About** | Bio, highlight stat cards, social links |
+| 03 | **Projects** | StudyVault, Performance Predictor, Portfolio — with Live Demo + GitHub links |
+| 04 | **Skills** | Animated skill bars (Languages, Frontend, Backend) + chip tags (ML, DB, Tools) |
+| 05 | **Code Signature** | A syntax-highlighted Python snippet showing personality & philosophy |
+| 06 | **Education** | Glowing dot timeline |
+| 07 | **Contact** | Email, GitHub, LinkedIn link cards |
+| 08 | **GitHub Activity** | Live contribution graph, streak stats, top languages |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Layer | Technology |
+|-------|-----------|
+| UI Framework | React 18 |
+| Styling | Tailwind CSS v3 |
+| Animations | CSS `@keyframes` + Canvas API |
+| Fonts | Orbitron, Space Mono, DM Sans (Google Fonts) |
+| GitHub Stats | [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) |
+| Contribution Graph | [github-readme-activity-graph](https://github.com/Ashutosh00710/github-readme-activity-graph) |
+| Deployment | Vercel |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ✨ Features
 
-## Learn More
+- 🎨 Deep space dark theme with electric cyan (`#00d4ff`) accent
+- 🔷 Floating animated geometric shapes (Canvas API — triangles, hexagons, rings)
+- ⌨️ Typewriter effect cycling through roles
+- 📜 Scroll-triggered reveal animations on every section
+- 📊 Animated skill bars that fill on scroll
+- 🖥️ Fake VS Code editor (Code Signature section)
+- 🐛 Floating Report/Feedback modal with type selector
+- 📈 Live GitHub contribution graph + stats
+- 📱 Fully responsive — mobile, tablet, desktop
+- ⬇️ Download CV button
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Projects Showcased
 
-### Code Splitting
+### 📚 StudyVault
+AI-powered study companion. Centralises notes, generates summaries, flashcards and quizzes from uploaded PDFs.
+`React` `Node.js` `MongoDB` `OpenAI API` `Express` `Cloudinary`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 📊 Performance Predictor
+ML model that analyses student data to predict academic performance and flag at-risk students early.
+`Python` `Scikit-learn` `Pandas` `NumPy` `Flask` `MySQL`
 
-### Analyzing the Bundle Size
+### 🌐 Portfolio Website
+This site. Animated React portfolio with canvas geometry, scroll reveals and GitHub stats.
+`React` `Tailwind CSS` `Canvas API`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This portfolio is open for inspiration. Please do not copy it wholesale and present it as your own.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">Designed & Built by <strong>Mohd Umar</strong> · 2025</p>
