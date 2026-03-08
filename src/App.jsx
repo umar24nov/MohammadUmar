@@ -22,8 +22,6 @@
  */
 
 import { useState, useEffect, useRef } from "react";
-import { db } from "./firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 /* ─────────────────────────────────────────────────────────
    1. GLOBAL STYLES
@@ -726,38 +724,62 @@ function GitHubMap() {
           </div>
 
           <div className="flex flex-col gap-4">
-            {/* Streak */}
+            {/* Streak — clicks to GitHub profile */}
             <div className="flex justify-center">
-              <img
-                src={`https://github-readme-streak-stats.herokuapp.com/?user=${u}&theme=transparent&${q}&ring=00d4ff&fire=00d4ff&currStreakLabel=00d4ff&sideLabels=6b8599&dates=6b8599&stroke=1a3040`}
-                alt="GitHub Streak"
-                className="rounded-lg h-auto"
-                style={{filter:"drop-shadow(0 0 8px rgba(0,212,255,0.18))", maxWidth:"min(400px, 100%)", width:"100%"}}
-              />
+              <a href={`https://github.com/${u}`} target="_blank" rel="noreferrer"
+                className="hover:opacity-80 transition-opacity duration-200"
+                title="View GitHub profile">
+                <img
+                  src={`/api/gh-streak/?user=${u}&theme=transparent&${q}&ring=00d4ff&fire=00d4ff&currStreakLabel=00d4ff&sideLabels=6b8599&dates=6b8599&stroke=1a3040`}
+                  alt="GitHub Streak"
+                  className="rounded-lg h-auto"
+                  onError={e => e.target.style.display="none"}
+                  style={{filter:"drop-shadow(0 0 8px rgba(0,212,255,0.18))", maxWidth:"min(400px, 100%)", width:"100%"}}
+                />
+              </a>
             </div>
 
-            {/* Activity graph */}
-            <img
-              src={`https://github-readme-activity-graph.vercel.app/graph?username=${u}&bg_color=070f1a&color=00d4ff&line=00d4ff&point=ffffff&area=true&area_color=00d4ff&hide_border=true&radius=6`}
-              alt="GitHub Activity"
-              className="w-full rounded-lg h-auto"
-              style={{filter:"drop-shadow(0 0 8px rgba(0,212,255,0.1))"}}
-            />
+            {/* Activity graph — clicks to contribution page */}
+            <a href={`https://github.com/${u}?tab=overview`} target="_blank" rel="noreferrer"
+              className="hover:opacity-80 transition-opacity duration-200 block"
+              title="View contribution activity">
+              <img
+                src={`/api/gh-graph/graph?username=${u}&bg_color=070f1a&color=00d4ff&line=00d4ff&point=ffffff&area=true&area_color=00d4ff&hide_border=true&radius=6`}
+                alt="GitHub Activity"
+                className="w-full rounded-lg h-auto"
+                onError={e => e.target.style.display="none"}
+                style={{filter:"drop-shadow(0 0 8px rgba(0,212,255,0.1))"}}
+              />
+            </a>
 
-            {/* Stats + Languages */}
+            {/* Stats + Languages — each clicks to relevant GitHub page */}
             <div className="gh-stats-row flex flex-wrap justify-center gap-3">
-              <img
-                src={`https://github-readme-stats.vercel.app/api?username=${u}&show_icons=true&theme=transparent&${q}&title_color=00d4ff&icon_color=00d4ff&text_color=e2eaf2`}
-                alt="GitHub Stats"
-                className="rounded-lg h-auto"
-                style={{filter:"drop-shadow(0 0 6px rgba(0,212,255,0.1))", maxWidth:"min(300px, 100%)", width:"100%"}}
-              />
-              <img
-                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${u}&layout=compact&theme=transparent&${q}&title_color=00d4ff&text_color=e2eaf2`}
-                alt="Top Languages"
-                className="rounded-lg h-auto"
-                style={{filter:"drop-shadow(0 0 6px rgba(0,212,255,0.1))", maxWidth:"min(240px, 100%)", width:"100%"}}
-              />
+              <a href={`https://github.com/${u}?tab=repositories`} target="_blank" rel="noreferrer"
+                className="hover:opacity-80 hover:scale-[1.02] transition-all duration-200"
+                title="View GitHub repositories"
+                style={{maxWidth:"min(300px, 100%)", width:"100%"}}>
+                <img
+                  src={`/api/gh-stats/api?username=${u}&show_icons=true&theme=transparent&${q}&title_color=00d4ff&icon_color=00d4ff&text_color=e2eaf2`}
+                  alt="GitHub Stats"
+                  crossOrigin="anonymous"
+                  className="rounded-lg h-auto w-full"
+                  onError={e => e.target.style.display="none"}
+                  style={{filter:"drop-shadow(0 0 6px rgba(0,212,255,0.1))"}}
+                />
+              </a>
+              <a href={`https://github.com/${u}?tab=repositories&language=`} target="_blank" rel="noreferrer"
+                className="hover:opacity-80 hover:scale-[1.02] transition-all duration-200"
+                title="View top languages"
+                style={{maxWidth:"min(240px, 100%)", width:"100%"}}>
+                <img
+                  src={`/api/gh-stats/api/top-langs/?username=${u}&layout=compact&theme=transparent&${q}&title_color=00d4ff&text_color=e2eaf2`}
+                  alt="Top Languages"
+                  crossOrigin="anonymous"
+                  className="rounded-lg h-auto w-full"
+                  onError={e => e.target.style.display="none"}
+                  style={{filter:"drop-shadow(0 0 6px rgba(0,212,255,0.1))"}}
+                />
+              </a>
             </div>
           </div>
 
@@ -775,6 +797,8 @@ function GitHubMap() {
 
 /* ─────────────────────────────────────────────────────────
    12. FEEDBACK MODAL
+   Slide-up panel. To actually send emails, integrate
+   Formspree (free) — see comment inside handleSubmit.
 ───────────────────────────────────────────────────────── */
 const typeOptions = [
   { emoji:"🐛", label:"Bug Report"  },
@@ -789,21 +813,12 @@ function FeedbackModal({ onClose }) {
   const [message, setMessage] = useState("");
   const [sent,    setSent]    = useState(false);
 
-  const handleSubmit = async () => {
-  if (!message.trim()) return;
-  try {
-    await addDoc(collection(db, "feedback"), {
-      type,
-      name,
-      email,
-      message,
-      createdAt: serverTimestamp()
-    });
+  const handleSubmit = () => {
+    if (!message.trim()) return;
+    /* Replace console.log with Formspree fetch() to actually send emails */
+    console.log("Feedback:", { type, name, email, message });
     setSent(true);
-  } catch (err) {
-    console.error("Error submitting feedback:", err);
-  }
-};
+  };
 
   return (
     /* Backdrop */
