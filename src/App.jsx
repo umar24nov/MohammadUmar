@@ -299,7 +299,7 @@ function Hero() {
             Put your resume PDF in /public as "resume.pdf"
             OR replace href with your Google Drive shareable link.
           */}
-          <a href="/resume.pdf" download="my-portfolio\Resume.pdf"
+          <a href="/resume.pdf" download="Mohd_Umar_Resume.pdf"
             className="font-spacemono text-[11px] md:text-xs font-bold tracking-widest px-5 md:px-8 py-2.5 md:py-3 rounded bg-transparent text-[#34d399] border border-[#34d399] no-underline hover:bg-[rgba(52,211,153,0.1)] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)] transition-all duration-200 inline-flex items-center gap-2">
             ⬇ Download CV
           </a>
@@ -407,7 +407,7 @@ const projects = [
   {
     name:"Portfolio Website", emoji:"🌐", tagline:"Personal Brand & Showcase",
     description:"This very site — animated React portfolio with canvas geometry, scroll reveals, a code signature and GitHub stats. Built purely with React & Tailwind CSS.",
-    tech:["React","Tailwind CSS",,"CSS Animations","Render"],
+    tech:["React","Tailwind CSS","CSS Animations","Render"],
     accent:"text-[#34d399]", border:"hover:border-[#34d399]", topBar:"from-[#34d399]",
     tag:"bg-[rgba(52,211,153,0.08)] text-[#34d399] border-[rgba(52,211,153,0.2)]",
     featured:false, status:"Live Now",
@@ -545,7 +545,6 @@ function Skills() {
           <SkillBar name="Node.js"  level={75} />
           <SkillBar name="Express"  level={72} />
           <SkillBar name="FAST API" level={70} />
-          {/* <SkillBar name="Flask"    level={65} /> */}
         </div>
 
         {/* ML + Database — chips only (honest, no fake bars) */}
@@ -574,7 +573,7 @@ function CodeSignature() {
   /* Each line is a JSX element with coloured spans */
   const lines = [
     <><span className="cc"># Who is Mohd Umar? Let the code explain.</span></>,
-    ``,
+    " ",
     <><span className="ck">class </span><span className="cf">Developer</span><span className="co">:</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">def </span><span className="cf">__init__</span><span className="co">(</span><span className="cv">self</span><span className="co">):</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">name</span>        <span className="co">=</span> <span className="cs">"Mohd Umar"</span></>,
@@ -582,7 +581,7 @@ function CodeSignature() {
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">skills</span>      <span className="co">=</span> <span className="co">["</span><span className="cs">React</span><span className="co">","</span><span className="cs">Node.js</span><span className="co">","</span><span className="cs">Python</span><span className="co">","</span><span className="cs">ML</span><span className="co">"]</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">philosophy</span>  <span className="co">=</span> <span className="cs">"Ship it. Improve it. Repeat."</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">self</span><span className="co">.</span><span className="cv">chai</span>      <span className="co">=</span> <span className="cn">float</span><span className="co">("inf")</span>  <span className="cc"># essential ☕</span></>,
-    ``,
+    " ",
     <>&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">def </span><span className="cf">solve</span><span className="co">(</span><span className="cv">self</span><span className="co">, </span><span className="cv">problem</span><span className="co">):</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cc"># Never give up — iterate until elegant</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">while not </span><span className="cv">problem</span><span className="co">.</span><span className="cf">solved</span><span className="co">():</span></>,
@@ -590,7 +589,7 @@ function CodeSignature() {
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="cv">problem</span><span className="co">.</span><span className="cf">attack</span><span className="co">(</span><span className="cv">approach</span><span className="co">)</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">if </span><span className="cv">self</span><span className="co">.</span><span className="cv">chai</span> <span className="co">==</span> <span className="cn">0</span><span className="co">: </span><span className="cf">self</span><span className="co">.</span><span className="cf">refill</span><span className="co">()</span></>,
     <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="ck">return </span><span className="cs">"elegant solution ✓"</span></>,
-    ``,
+    " ",
     <><span className="cc"># Entry point</span></>,
     <><span className="cv">umar</span> <span className="co">=</span> <span className="cf">Developer</span><span className="co">()</span></>,
     <><span className="cf">print</span><span className="co">(</span><span className="cv">umar</span><span className="co">.</span><span className="cf">solve</span><span className="co">(</span><span className="cs">"your next big idea"</span><span className="co">))</span></>,
