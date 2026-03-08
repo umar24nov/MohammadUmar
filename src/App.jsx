@@ -22,6 +22,8 @@
  */
 
 import { useState, useEffect, useRef } from "react";
+import { db } from "./firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 /* ─────────────────────────────────────────────────────────
    1. GLOBAL STYLES
@@ -773,8 +775,6 @@ function GitHubMap() {
 
 /* ─────────────────────────────────────────────────────────
    12. FEEDBACK MODAL
-   Slide-up panel. To actually send emails, integrate
-   Formspree (free) — see comment inside handleSubmit.
 ───────────────────────────────────────────────────────── */
 const typeOptions = [
   { emoji:"🐛", label:"Bug Report"  },
@@ -789,12 +789,21 @@ function FeedbackModal({ onClose }) {
   const [message, setMessage] = useState("");
   const [sent,    setSent]    = useState(false);
 
-  const handleSubmit = () => {
-    if (!message.trim()) return;
-    /* Replace console.log with Formspree fetch() to actually send emails */
-    console.log("Feedback:", { type, name, email, message });
+  const handleSubmit = async () => {
+  if (!message.trim()) return;
+  try {
+    await addDoc(collection(db, "feedback"), {
+      type,
+      name,
+      email,
+      message,
+      createdAt: serverTimestamp()
+    });
     setSent(true);
-  };
+  } catch (err) {
+    console.error("Error submitting feedback:", err);
+  }
+};
 
   return (
     /* Backdrop */
