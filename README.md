@@ -1,7 +1,5 @@
 # 🌐 Mohd Umar — Personal Portfolio
 
-> A dark-themed, animated personal portfolio built with **React** and **Tailwind CSS**.
-
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38BDF8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-00d4ff?style=flat-square)](LICENSE)
@@ -11,7 +9,7 @@
 
 ## 👤 About
 
-This is the personal portfolio of **Mohd Umar**, a B.Tech Computer Science fresher passionate about Full Stack Development and Machine Learning. This site serves as a showcase of projects, skills, and open-source activity.
+This is the personal portfolio of **Mohd Umar**, a B.Tech Computer Science fresher passionate about Development and Machine Learning. This site serves as a showcase of projects, skills, and open-source activity.
 
 - 📧 [umar24nov@gmail.com](mailto:umar24nov@gmail.com)
 - 💼 [linkedin.com/in/mohammadumarfarook](https://www.linkedin.com/in/mohammadumarfarook)
