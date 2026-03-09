@@ -375,7 +375,7 @@ function About() {
               <div className="text-3xl mb-3">{h.icon}</div>
               {h.value === "dev+ml" ? (
                 <div className="font-orbitron text-[#00d4ff] text-sm font-bold mb-1 leading-snug">
-                  <div>Development</div>
+                  <div>Frontend</div>
                   <div>Machine Learning</div>
                 </div>
               ) : (
