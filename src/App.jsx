@@ -754,34 +754,21 @@ function GitHubMap() {
               />
             </a>
 
-            {/* Stats + Languages — each clicks to relevant GitHub page */}
-            <div className="gh-stats-row flex flex-wrap justify-center gap-3">
-              <a href={`https://github.com/${u}?tab=repositories`} target="_blank" rel="noreferrer"
-                className="hover:opacity-80 hover:scale-[1.02] transition-all duration-200"
-                title="View GitHub repositories"
-                style={{maxWidth:"min(300px, 100%)", width:"100%"}}>
-                <img
-                  src={`https://github-readme-stats.vercel.app/api?username=${u}&show_icons=true&theme=transparent&${q}&title_color=00d4ff&icon_color=00d4ff&text_color=e2eaf2`}
-                  alt="GitHub Stats"
-                  crossOrigin="anonymous"
-                  className="rounded-lg h-auto w-full"
-                  onError={e => e.target.style.display="none"}
-                  style={{filter:"drop-shadow(0 0 6px rgba(0,212,255,0.1))"}}
-                />
-              </a>
-              <a href={`https://github.com/${u}?tab=repositories&language=`} target="_blank" rel="noreferrer"
-                className="hover:opacity-80 hover:scale-[1.02] transition-all duration-200"
-                title="View top languages"
-                style={{maxWidth:"min(240px, 100%)", width:"100%"}}>
-                <img
-                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${u}&layout=compact&theme=transparent&${q}&title_color=00d4ff&text_color=e2eaf2`}
-                  alt="Top Languages"
-                  crossOrigin="anonymous"
-                  className="rounded-lg h-auto w-full"
-                  onError={e => e.target.style.display="none"}
-                  style={{filter:"drop-shadow(0 0 6px rgba(0,212,255,0.1))"}}
-                />
-              </a>
+            {/* Stats — Shields.io badges, always reliable */}
+            <div className="flex flex-wrap justify-center gap-2 px-2">
+              {[
+                { label:"Followers",   message:"GitHub",  color:"00d4ff", href:`https://github.com/${u}?tab=followers`,    img:`https://img.shields.io/github/followers/${u}?label=Followers&style=for-the-badge&color=00d4ff&labelColor=0d1a2a&logo=github` },
+                { label:"Stars",       message:"Stars",   color:"a78bfa", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/github/stars/${u}?label=Total%20Stars&style=for-the-badge&color=a78bfa&labelColor=0d1a2a&logo=github` },
+                { label:"Repos",       message:"Repos",   color:"34d399", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/${u}&query=public_repos&label=Public%20Repos&style=for-the-badge&color=34d399&labelColor=0d1a2a&logo=github` },
+                { label:"JavaScript",  message:"JS",      color:"f7df1e", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/JavaScript-Most%20Used-f7df1e?style=for-the-badge&labelColor=0d1a2a&logo=javascript` },
+                { label:"Python",      message:"Python",  color:"3776ab", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/Python-Language-3776ab?style=for-the-badge&labelColor=0d1a2a&logo=python` },
+                { label:"React",       message:"React",   color:"61dafb", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/React-Framework-61dafb?style=for-the-badge&labelColor=0d1a2a&logo=react` },
+              ].map(b => (
+                <a key={b.label} href={b.href} target="_blank" rel="noreferrer"
+                  className="hover:opacity-80 hover:scale-105 transition-all duration-200">
+                  <img src={b.img} alt={b.label} className="h-7 rounded" onError={e => e.target.style.display="none"} />
+                </a>
+              ))}
             </div>
           </div>
 
