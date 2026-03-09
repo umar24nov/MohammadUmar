@@ -22,7 +22,8 @@
  */
 
 import { useState, useEffect, useRef } from "react";
-
+import { db } from "./firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 /* ─────────────────────────────────────────────────────────
    1. GLOBAL STYLES
    Only @keyframes + font imports here.
@@ -813,11 +814,21 @@ function FeedbackModal({ onClose }) {
   const [message, setMessage] = useState("");
   const [sent,    setSent]    = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!message.trim()) return;
-    /* Replace console.log with Formspree fetch() to actually send emails */
-    console.log("Feedback:", { type, name, email, message });
-    setSent(true);
+    try {
+      await addDoc(collection(db, "feedback"), {
+        type,
+        name,
+        email,
+        message,
+        createdAt: serverTimestamp()
+      });
+      setSent(true);
+    } catch (err) {
+      console.error("Firebase error:", err);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
