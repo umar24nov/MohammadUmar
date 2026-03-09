@@ -24,6 +24,7 @@
 import { useState, useEffect, useRef } from "react";
 import { db } from "./firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+
 /* ─────────────────────────────────────────────────────────
    1. GLOBAL STYLES
    Only @keyframes + font imports here.
@@ -300,7 +301,7 @@ function Hero() {
             Put your resume PDF in /public as "resume.pdf"
             OR replace href with your Google Drive shareable link.
           */}
-          <a href="https://drive.google.com/file/d/1p4MqRR4ZIOBmpaXDYqdPowjZ3i0qX1UG/view?usp=drive_link" download="Resume.pdf"
+          <a href="/resume.pdf" download="Mohd_Umar_Resume.pdf"
             className="font-spacemono text-[11px] md:text-xs font-bold tracking-widest px-5 md:px-8 py-2.5 md:py-3 rounded bg-transparent text-[#34d399] border border-[#34d399] no-underline hover:bg-[rgba(52,211,153,0.1)] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(52,211,153,0.3)] transition-all duration-200 inline-flex items-center gap-2">
             ⬇ Download CV
           </a>
@@ -731,7 +732,7 @@ function GitHubMap() {
                 className="hover:opacity-80 transition-opacity duration-200"
                 title="View GitHub profile">
                 <img
-                  src={`/api/gh-streak/?user=${u}&theme=transparent&${q}&ring=00d4ff&fire=00d4ff&currStreakLabel=00d4ff&sideLabels=6b8599&dates=6b8599&stroke=1a3040`}
+                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${u}&theme=transparent&${q}&ring=00d4ff&fire=00d4ff&currStreakLabel=00d4ff&sideLabels=6b8599&dates=6b8599&stroke=1a3040`}
                   alt="GitHub Streak"
                   className="rounded-lg h-auto"
                   onError={e => e.target.style.display="none"}
@@ -745,7 +746,7 @@ function GitHubMap() {
               className="hover:opacity-80 transition-opacity duration-200 block"
               title="View contribution activity">
               <img
-                src={`/api/gh-graph/graph?username=${u}&bg_color=070f1a&color=00d4ff&line=00d4ff&point=ffffff&area=true&area_color=00d4ff&hide_border=true&radius=6`}
+                src={`https://github-readme-activity-graph.vercel.app/graph?username=${u}&bg_color=070f1a&color=00d4ff&line=00d4ff&point=ffffff&area=true&area_color=00d4ff&hide_border=true&radius=6`}
                 alt="GitHub Activity"
                 className="w-full rounded-lg h-auto"
                 onError={e => e.target.style.display="none"}
@@ -760,7 +761,7 @@ function GitHubMap() {
                 title="View GitHub repositories"
                 style={{maxWidth:"min(300px, 100%)", width:"100%"}}>
                 <img
-                  src={`/api/gh-stats/api?username=${u}&show_icons=true&theme=transparent&${q}&title_color=00d4ff&icon_color=00d4ff&text_color=e2eaf2`}
+                  src={`https://github-readme-stats.vercel.app/api?username=${u}&show_icons=true&theme=transparent&${q}&title_color=00d4ff&icon_color=00d4ff&text_color=e2eaf2`}
                   alt="GitHub Stats"
                   crossOrigin="anonymous"
                   className="rounded-lg h-auto w-full"
@@ -773,7 +774,7 @@ function GitHubMap() {
                 title="View top languages"
                 style={{maxWidth:"min(240px, 100%)", width:"100%"}}>
                 <img
-                  src={`/api/gh-stats/api/top-langs/?username=${u}&layout=compact&theme=transparent&${q}&title_color=00d4ff&text_color=e2eaf2`}
+                  src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${u}&layout=compact&theme=transparent&${q}&title_color=00d4ff&text_color=e2eaf2`}
                   alt="Top Languages"
                   crossOrigin="anonymous"
                   className="rounded-lg h-auto w-full"
