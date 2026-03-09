@@ -342,7 +342,7 @@ function About() {
   const hi = [
     { icon:"🎓", label:"Degree",   value:"B.Tech CSE" },
     { icon:"💻", label:"Projects", value:"3+"          },
-    // { icon:"🌐", label:"Focus",    value:"FS + ML"     },
+    { icon:"🌐", label:"Skills",    value:"dev+ml"     },
     { icon:"📍", label:"Location", value:"India"       },
   ];
   return (
@@ -373,7 +373,14 @@ function About() {
           {hi.map(h => (
             <div key={h.label} className="bg-[#0d1a2a] border border-[#1a3040] rounded-xl p-4 md:p-6 hover:border-[#00d4ff] transition-colors duration-300">
               <div className="text-3xl mb-3">{h.icon}</div>
-              <div className="font-orbitron text-[#00d4ff] text-lg font-bold mb-1">{h.value}</div>
+              {h.value === "dev+ml" ? (
+                <div className="font-orbitron text-[#00d4ff] text-sm font-bold mb-1 leading-snug">
+                  <div>Development</div>
+                  <div>Machine Learning</div>
+                </div>
+              ) : (
+                <div className="font-orbitron text-[#00d4ff] text-lg font-bold mb-1">{h.value}</div>
+              )}
               <div className="font-spacemono text-[#6b8599] text-[11px] tracking-widest">{h.label}</div>
             </div>
           ))}
@@ -760,6 +767,9 @@ function GitHubMap() {
                 { label:"Followers",   message:"GitHub",  color:"00d4ff", href:`https://github.com/${u}?tab=followers`,    img:`https://img.shields.io/github/followers/${u}?label=Followers&style=for-the-badge&color=00d4ff&labelColor=0d1a2a&logo=github` },
                 { label:"Stars",       message:"Stars",   color:"a78bfa", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/github/stars/${u}?label=Total%20Stars&style=for-the-badge&color=a78bfa&labelColor=0d1a2a&logo=github` },
                 { label:"Repos",       message:"Repos",   color:"34d399", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/${u}&query=public_repos&label=Public%20Repos&style=for-the-badge&color=34d399&labelColor=0d1a2a&logo=github` },
+                { label:"JavaScript",  message:"JS",      color:"f7df1e", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/JavaScript-Most%20Used-f7df1e?style=for-the-badge&labelColor=0d1a2a&logo=javascript` },
+                { label:"Python",      message:"Python",  color:"3776ab", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/Python-Language-3776ab?style=for-the-badge&labelColor=0d1a2a&logo=python` },
+                { label:"React",       message:"React",   color:"61dafb", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/React-Framework-61dafb?style=for-the-badge&labelColor=0d1a2a&logo=react` },
               ].map(b => (
                 <a key={b.label} href={b.href} target="_blank" rel="noreferrer"
                   className="hover:opacity-80 hover:scale-105 transition-all duration-200">
