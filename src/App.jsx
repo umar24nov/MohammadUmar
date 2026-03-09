@@ -342,7 +342,7 @@ function About() {
   const hi = [
     { icon:"🎓", label:"Degree",   value:"B.Tech CSE" },
     { icon:"💻", label:"Projects", value:"3+"          },
-    { icon:"🌐", label:"Focus",    value:"FS + ML"     },
+    // { icon:"🌐", label:"Focus",    value:"FS + ML"     },
     { icon:"📍", label:"Location", value:"India"       },
   ];
   return (
