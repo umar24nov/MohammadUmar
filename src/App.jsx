@@ -284,7 +284,7 @@ function Hero() {
           </span>
         </div>
         <p className="font-dmsans text-[#6b8599] text-[clamp(15px,2vw,17px)] mt-6 leading-relaxed max-w-[560px] mx-auto anim-fadeUp-d4">
-          A passionate CS fresher building real-world solutions — from AI-powered study tools to performance prediction engines.
+          A passionate CS fresher building real-world solutions — from study tools to performance prediction engines.
         </p>
         {/* CTA Buttons */}
         <div className="flex gap-3 justify-center flex-wrap mt-8 md:mt-10 anim-fadeUp-d5">
@@ -354,7 +354,7 @@ function About() {
             Hi! I'm <span className="text-[#00d4ff] font-bold">Mohd Umar</span>, a CS fresher who loves building software that solves real problems. I thrive at the intersection of clean frontend design and solid backend logic.
           </p>
           <p className="font-dmsans text-[#6b8599] text-sm leading-loose">
-            From AI-powered study platforms to ML performance predictors, I turn ideas into polished products. Driven by curiosity — always learning, always shipping.
+            From study resources platforms to ML performance predictors, I turn ideas into polished products. Driven by curiosity — always learning, always shipping.
           </p>
           <div className="mt-7 flex gap-3 flex-wrap">
             {[
