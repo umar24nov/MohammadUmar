@@ -759,7 +759,7 @@ function GitHubMap() {
               {[
                 { label:"Followers",   message:"GitHub",  color:"00d4ff", href:`https://github.com/${u}?tab=followers`,    img:`https://img.shields.io/github/followers/${u}?label=Followers&style=for-the-badge&color=00d4ff&labelColor=0d1a2a&logo=github` },
                 { label:"Stars",       message:"Stars",   color:"a78bfa", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/github/stars/${u}?label=Total%20Stars&style=for-the-badge&color=a78bfa&labelColor=0d1a2a&logo=github` },
-                { label:"Repos",       message:"Repos",   color:"34d399", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/${u}&query=public_repos&label=Public%20Repos&style=for-the-badge&color=34d399&labelColor=0d1a2a&logo=github` }
+                { label:"Repos",       message:"Repos",   color:"34d399", href:`https://github.com/${u}?tab=repositories`, img:`https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/${u}&query=public_repos&label=Public%20Repos&style=for-the-badge&color=34d399&labelColor=0d1a2a&logo=github` },
               ].map(b => (
                 <a key={b.label} href={b.href} target="_blank" rel="noreferrer"
                   className="hover:opacity-80 hover:scale-105 transition-all duration-200">
